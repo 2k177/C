@@ -121,3 +121,21 @@ int main() {
    printf("%d", isvaluePresent);
    
 }
+
+/* 
+output:
+1	2	3	
+Linked list after adding element at beginging
+18	1	2	3	
+Linked list after adding element at end
+temp->data : 3
+1	2	3	16	
+Linked list after adding element at position : 2
+1	2	7	3	16	
+Linked list after deleting node at begining..
+2	7	3	16	
+Linked list after deleting node at end..
+2	7	3	
+Serching for node 7..
+1
+*/
