@@ -24,3 +24,14 @@ int main(void){
     printf("Value of m : %d\n", m);
     
 }
+
+//Output
+// Address of m : 0x7fff692fae3c
+// Value of m : 29
+// Address of pointer ab : 0x7fff692fae40
+// Address of pointer ab : 29
+// Changing the value of m to 34
+// Address of pointer ab : 0x7fff692fae40
+// Address of pointer ab : 34
+// update variable ab with a value...Address of m : 0x7fff692fae3c
+// Value of m : 7
