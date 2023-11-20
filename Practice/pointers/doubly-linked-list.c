@@ -33,6 +33,15 @@ void insertAtEnd(data){
     temp->next = newNode;
 }
 
+void deleteAtBegin(){
+    if (head == NULL){
+        printf("Empty linked list");
+        return;
+    }
+    head = head->next;
+    head->prev = NULL;
+}
+
 void printList() {
   Node *temp = head;
 
@@ -51,8 +60,13 @@ int main() {
     insertAtBeginning(9);
     insertAtEnd(12);
     printList();
+    deleteAtBegin();
+    printf("Linked list after deleting at begining..\n");
+    printList();
     return 0;
 }
 
 // output
-//9->10->11->12->
+// 9->10->11->12->
+// Linked list after deleting at begining..
+// 10->11->12->
