@@ -42,6 +42,20 @@ void deleteAtBegin(){
     head->prev = NULL;
 }
 
+void deleteAtEnd(){
+    if (head == NULL){
+        printf("Empty linked list");
+        return;
+    }
+    Node *temp = head;
+    while (temp->next->next != NULL) {
+        temp = temp->next;
+  }
+//   printf("%d\n", temp->data);
+  temp->next = NULL;
+//   printf("%d\n", head->data);
+}
+
 void printList() {
   Node *temp = head;
 
@@ -59,6 +73,10 @@ int main() {
     insertAtBeginning(10);
     insertAtBeginning(9);
     insertAtEnd(12);
+    
+    printList();
+    deleteAtEnd();
+    printf("Linked list after deleting at end..\n");
     printList();
     deleteAtBegin();
     printf("Linked list after deleting at begining..\n");
@@ -68,5 +86,7 @@ int main() {
 
 // output
 // 9->10->11->12->
+// Linked list after deleting at end..
+// 9->10->11->
 // Linked list after deleting at begining..
-// 10->11->12->
+// 10->11->
